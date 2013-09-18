@@ -6,6 +6,10 @@ import org.shishigami.pattern.state.example.Player;
 import org.shishigami.pattern.state.example.Player.PlayerImage;
 
 public class StandingState implements PlayerState {
+	
+	public StandingState() {
+		System.out.println("[INFO] Entering Standing State.");
+	}
 
 	@Override
 	public void handleInput(Player player, Input input) {
@@ -16,7 +20,7 @@ public class StandingState implements PlayerState {
 			player.setPlayerImage(PlayerImage.IMAGE_CROUCHING);
 			player.setPlayerState(new CrouchingState());
 		} else if (input.getPressedKey().equals(Action.DIVE_ATTACK)) {
-			// can't dive attack while standing
+			System.out.println("[ERROR] Can't dive attack while standing!");
 		}
 	}
 

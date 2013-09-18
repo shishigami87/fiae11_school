@@ -5,15 +5,19 @@ import org.shishigami.pattern.state.example.Input;
 import org.shishigami.pattern.state.example.Player;
 
 public class DiveAttackState implements PlayerState {
+	
+	public DiveAttackState() {
+		System.out.println("[INFO] Entering DiveAttack State.");
+	}
 
 	@Override
 	public void handleInput(Player player, Input input) {
 		if (input.getPressedKey().equals(Action.JUMP)) {
-			// just no.
+			System.out.println("[ERROR] Can't jump while dive attacking!");
 		} else if (input.getPressedKey().equals(Action.CROUCH)) {
-			// i don't even
+			System.out.println("[ERROR] Can't crouch while dive attacking!");
 		} else if (input.getPressedKey().equals(Action.DIVE_ATTACK)) {
-			// diveattackception!
+			System.out.println("[ERROR] Can't dive attack while dive attacking!");
 		}
 	}
 
