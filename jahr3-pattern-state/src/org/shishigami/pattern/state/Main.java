@@ -28,6 +28,8 @@ public class Main {
 		// expected : enter dive attack state
 		input.debugDiveAttack();
 		player.handleInput(input);
+		
+		// git test
 	}
 
 }
