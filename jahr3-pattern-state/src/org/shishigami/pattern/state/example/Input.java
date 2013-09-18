@@ -1,17 +1,23 @@
 package org.shishigami.pattern.state.example;
 
-import java.util.Random;
-
 public class Input {
-	
+
+	private String pressedKey = Action.NOTHING;
+
 	public String getPressedKey() {
-		int randomNumber = new Random().nextInt(3);
-		
-		switch (randomNumber) {
-			case 0: return Action.JUMP;
-			case 1: return Action.CROUCH;
-			default: return Action.DIVE_ATTACK;
-		}
+		return pressedKey;
 	}
-	
+
+	public void debugJump() {
+		pressedKey = Action.JUMP;
+	}
+
+	public void debugCrouch() {
+		pressedKey = Action.CROUCH;
+	}
+
+	public void debugDiveAttack() {
+		pressedKey = Action.DIVE_ATTACK;
+	}
+
 }
