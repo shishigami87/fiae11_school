@@ -12,6 +12,8 @@ import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class Fenster extends JFrame {
 
@@ -39,6 +41,11 @@ public class Fenster extends JFrame {
 		random = new Random();
 		new Random();
 		buttonToHunt = new JButton("Klick mich!");
+		buttonToHunt.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				gewonnen();
+			}
+		});
 		buttonToHunt.setBounds(122, 182, 123, 23);
 		contentPane.add(buttonToHunt);
 		buttonToHunt.setFocusable(false);
@@ -57,6 +64,10 @@ public class Fenster extends JFrame {
 
 	private void moveButton() {
 		buttonToHunt.setLocation(random.nextInt(contentPane.getWidth() - 200), random.nextInt(getHeight() - 100));
+	}
+	
+	private void gewonnen(){
+		JOptionPane.showMessageDialog(this, "Du hast gewonnen!");
 	}
 
 	private void checkFairness() {
