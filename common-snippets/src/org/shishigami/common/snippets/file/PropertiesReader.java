@@ -11,7 +11,7 @@ import org.shishigami.common.snippets.beans.Person;
 public class PropertiesReader {
 
 	public Person createPersonFromProperties() throws IOException {
-		File propertiesFile = new File("test.properties");
+		File propertiesFile = new File("resources/test.properties");
 		InputStream inputStream = new FileInputStream(propertiesFile);
 
 		Properties properties = new Properties();
@@ -25,7 +25,7 @@ public class PropertiesReader {
 	}
 	
 	public Person createModifiedPersonFromProperties() throws IOException {
-		File propertiesFile = new File("test.properties");
+		File propertiesFile = new File("resources/test.properties");
 		InputStream inputStream = new FileInputStream(propertiesFile);
 
 		Properties properties = new Properties();
