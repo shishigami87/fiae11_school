@@ -1,0 +1,2 @@
+Dies ist nur ein Test um zu testen ob das Programm in der Lage ist 
+den eingegebenen Text richtig zu erfassen.
