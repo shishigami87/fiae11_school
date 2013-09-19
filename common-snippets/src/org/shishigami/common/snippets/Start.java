@@ -3,7 +3,7 @@ package org.shishigami.common.snippets;
 import java.io.IOException;
 
 import org.shishigami.common.snippets.file.PropertiesReader;
-import org.shishigami.common.snippets.file.ReadFile;
+import org.shishigami.common.snippets.file.FileReader;
 
 public class Start {
 	
@@ -15,7 +15,7 @@ public class Start {
 			System.out.println(propertiesReader.createModifiedPersonFromProperties());
 			
 			System.out.println("\n[INFO] Testing FileReader\n");
-			ReadFile readFile = new ReadFile();
+			FileReader readFile = new FileReader();
 			readFile.printFileContent();
 		} catch (IOException e) {
 			e.printStackTrace();

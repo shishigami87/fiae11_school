@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 
-public class ReadFile {
+public class FileReader {
 
 	public void printFileContent() throws IOException {
 		File file = new File("resources/test.txt");
