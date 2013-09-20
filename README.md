@@ -11,6 +11,7 @@ Code snippets for stuff that is used a lot, list of all snippets :
 - Read from File (using BufferedReader)
 - Recursive File search (Using standard library)
 - Serialization & Deserialization
+- JodaTime
 
 **==Patterns==**
 
