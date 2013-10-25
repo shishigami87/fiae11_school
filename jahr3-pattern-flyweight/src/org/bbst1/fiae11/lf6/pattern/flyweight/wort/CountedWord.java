@@ -8,7 +8,7 @@ public class CountedWord {
     private final String wort;
     private int anzahl;
 
-    private static Set<CountedWord> worte = new HashSet<CountedWord>();
+    private static final Set<CountedWord> worte = new HashSet<CountedWord>();
 
     /**
      * @param word Das neue Wort das gespeichert werden soll
